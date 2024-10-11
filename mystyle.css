@@ -1,0 +1,56 @@
+
+html, body {height:100%;}
+header {
+    padding: 20px;
+    background-color: olive;
+    color: white;
+}
+nav {
+    padding: 5px;
+    background-color: cadetblue;
+    color: white;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    text-transform: uppercase;
+    padding: 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    color: black;
+}
+aside div{
+    background-color: bisque;
+    width: 35%;
+    float: right;
+    text-align: center;
+}
+section {
+    background-color: rgb(224, 233, 253);
+    width: 65%;
+    float: left;
+}
+section h2 {
+    text-align: center;
+}
+footer {
+    background-color: lightgray;
+    clear: both;
+}
+footer ul {
+    list-style: none;
+    text-align: center;
+}
+footer ul li {
+    display: inline;
+    padding: 15px;
+}
+article {
+    background-color: rgba(255, 255, 255, 0.672);
+}

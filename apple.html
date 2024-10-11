@@ -4,18 +4,88 @@
     <title> 
         나의 웹페이지
     </title>
-    
+   <style>
+    html, body {height:100%;}
+header {
+    padding: 20px;
+    background-color: olive;
+    color: white;
+}
+header a {
+            text-decoration: none;
+            color: white;
+        }
+        header a:hover {
+            color: black;
+        }
+nav {
+    padding: 5px;
+    background-color: cadetblue;
+    color: white;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    text-transform: uppercase;
+    padding: 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    color: black;
+}
+aside div{
+    background-color: bisque;
+    width: 35%;
+    float: right;
+    text-align: center;
+}
+section {
+    background-color: rgb(224, 233, 253);
+    width: 65%;
+    float: left;
+}
+section h2 {
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+footer {
+    background-color: lightgray;
+    clear: both;
+}
+footer ul {
+    list-style: none;
+    text-align: center;
+}
+footer ul li {
+    display: inline;
+    padding: 15px;
+}
+article {
+    background-color: rgba(255, 255, 255, 0.672);
+    text-align: center;
+}
+
+   </style>
 
 <body>
     <header>
-    <h1>Veggie Shop</h1></header>
+    <h1><a href="index.html">Veggie Shop</a></h1></header>
     <nav>
     <ul>
-        <li><a href = "#fruits" target="_blank"> Fresh Fruits </a></li>
-        <li><a href = "#veggies"> Fresh Veggies </a></li>
-        <li><a href="#salads">Fresh Salads</a></li>
+        <li><a href = "index.html#fruits"> Fresh Fruits </a></li>
+        <li><a href = "index.html#veggies"> Fresh Veggies </a></li>
+        <li><a href="index.html#salads">Fresh Salads</a></li>
         <li>Seeds and Nuts</li>
         <li>Gift Box</li>
+        <li><a href="login.html" target="_blank">로그인</a></li>
+        <li><a href="signup.html" target="_blank">회원가입</a></li>
        
     </ul>
     </nav>
@@ -23,7 +93,7 @@
     <article>
     <h2>탐스럽게 익은 신선한 사과, 한 입의 상쾌함!</h2>
     
-     <img src="image/apple2.jpg" width="300">
+     <img src="image/apple2.jpg" width="300" style="float:left;">
     
    
     <br><br>
@@ -49,7 +119,7 @@
      </form>
 
      <br><br>
-     <h3 style="clear:both;"> 지금 막 수확한 달콤하고 아삭한 사과,<br>
+     <h3 > 지금 막 수확한 달콤하고 아삭한 사과,<br>
         입안 가득 퍼지는 자연의 맛을 느껴보세요.<br>
     </h3>
      <br>
