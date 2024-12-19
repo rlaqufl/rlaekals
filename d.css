@@ -30,8 +30,6 @@ img {
 #preview {
     border-radius: 10px;
 }
-
-/* 컨테이너 스타일 */
 .container {
     max-width: 800px; 
     margin: 0 auto; 
@@ -40,4 +38,16 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     padding: 20px; 
     border-radius: 10px;
+   
+}
+#imageInput {
+    margin-top: 10px; /* 상단에 20px의 여백 추가 */
+    margin-bottom: 5px; /* 하단에 20px의 여백 추가 (선택 사항) */
+}
+#label-container {
+    font-size: 2em; /* 글씨 크기를 2배로 설정 */
+    font-weight: bold; /* 글씨를 굵게 설정 (선택 사항) */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    margin-top: 30px; /* 위쪽 여백 추가 */
+    color: #333; /* 글씨 색상 설정 */
 }

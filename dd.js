@@ -49,22 +49,37 @@
     reader.readAsDataURL(file);
     }
 
-    // 모델에 이미지를 입력하고 예측 결과를 화면에 표시하는 함수
-    async function predict(imageElement) {
-        // 모델을 통해 이미지를 예측
-        const prediction = await model.predict(imageElement);
+ // 모델에 이미지를 입력하고 예측 결과를 화면에 표시하는 함수
+async function predict(imageElement) {
+    // 모델을 통해 이미지를 예측
+    const prediction = await model.predict(imageElement);
 
-        // 각 클래스별 예측 확률을 화면에 표시
-        for (let i = 0; i < maxPredictions; i++) {
-            
-            const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction; // 결과를 label-container에 추가
+    // 예측된 클래스 중 가장 확률이 높은 클래스만 가져오기
+    const topPrediction = prediction.reduce((max, current) => {
+        return current.probability > max.probability ? current : max;
+    });
 
-           /*if(prediction[i].probability>0.5){
-            labelContainer.childNodes[i].innerHTML = prediction[i].className;
-          }*/
-        }
+    // 예측된 클래스 이름
+    const className = topPrediction.className;
+
+    // 결과를 표시할 텍스트 색상 설정
+    let textColor = "";
+
+    // 클래스 이름에 맞춰 색상 설정
+    if (className === "겨울") {
+        textColor = "skyblue"; // 하늘색
+    } else if (className === "봄") {
+        textColor = "#fec9de"; // 핑크색
+    } else if (className === "여름") {
+        textColor = "green"; // 초록색
+    } else if (className === "가을") {
+        textColor = "#93010f"; // 버건디색 (조금 더 부드러운 색)
     }
+
+    // 색상을 적용하여 결과 텍스트를 표시
+    labelContainer.innerHTML = className; // 예측된 클래스 이름만 출력
+    labelContainer.style.color = textColor; // 색상 변경
+}
 
     // 스크립트가 로드될 때 모델을 초기화
     init();
